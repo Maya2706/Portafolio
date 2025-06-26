@@ -1,7 +1,5 @@
 # Import
-from flask import Flask, render_template,request, redirect
-
-
+from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
@@ -9,7 +7,6 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
-
 
 # Habilidades dinámicas
 @app.route('/', methods=['POST'])
@@ -22,11 +19,14 @@ def process_form():
                            button_discord=button_discord,
                            button_html=button_html,
                            button_db=button_db)
-    
-@app.route('/', methods=['POST'])
+
+@app.route('/formulario', methods=['POST'])
 def formulario():
     email = request.form.get('email')
     text = request.form.get('text')
+    with open('form.txt', 'a', encoding='utf-8') as f:
+        f.write("Correo: " + email + '\n')
+        f.write("Comentario: " + text + '\n\n')
     return render_template('index.html', email=email, text=text)
 
 if __name__ == "__main__":
