@@ -15,13 +15,13 @@
       <nav class="header__nav main-nav">
         <ul class="main-nav__list main-list">
           <li class="main-list__item list-item">
-            <a class="list-item__link" href="#home">HOME</a>
+            <a class="list-item__link" href="#home">INICIO</a>
           </li>
           <li class="main-list__item list-item">
-            <a class="list-item__link" href="#about">ABOUT</a>
+            <a class="list-item__link" href="#about">SOBRE MI</a>
           </li>
           <li class="main-list__item list-item">
-            <a class="list-item__link" href="#skills">MY SKILLS</a>
+            <a class="list-item__link" href="#skills">MIS HABILIDADES</a>
           </li>
         </ul>
       </nav>
@@ -29,22 +29,22 @@
     <main class="main">
       <!-- Vista previa -->
       <section class="main__home home" id="home">
-        <h1 class="home__title">NAME SURNAME</h1>
+        <h1 class="home__title">MAYA BAYTELMAN</h1>
         <p class="home__subtitle">WEB-DEVELOPER, PYTHON PROGRAMMER</p>
       </section>
       <!-- Acerca de mí -->
       <section class="main__about about" id="about">
-        <h2 class="about__title">ABOUT ME</h2>
+        <h2 class="about__title">SOBRE MI</h2>
         <div class="about__info info-block">
           <p class="info-block__text">
             Soy Maya Baytelman de Chile y me gusta mucho la programación y la tecnología. 
-            Se programar en Python y he hecho algunos proyectos como un diario, con SQL, 
-            o una calculadora ecológica usando HTML.
+            Se programar en Python y he hecho algunos proyectos como un diario digital, con Bases de datos 
+            o una calculadora ecológica usando HTML. Me gusta aprender cosas nuevas y usar mis conocimientos en distintos tipoos de desafios
 
           </p>
           <img
             class="info-block__img"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsdD5DzDgeHYWp_C_C5u4fgmolpU-ZrHFETQ&s"
+            src="../static/img/profile_nbg.png"
             alt="me"
             width="450"
             height="450"
@@ -54,7 +54,7 @@
       </section>
       <!-- Sección de competencias -->
       <section class="main__skills skills" id="skills">
-        <h2 class="skills__title">MY SKILLS</h2>
+        <h2 class="skills__title">MIS HABILIDADES</h2>
         <form action="/" method="POST">
           <ul class="skills__list skills-list">
             <li class="skills-list__skill skill">
@@ -65,7 +65,7 @@
                 width="150"
                 height="150"
               />
-              <span class="skill__info">Skill info</span>
+              <span class="skill__info">Python</span>
               <input class="skill__button" type="submit" name="button_python" value="SHOW PROJECT">
             </li>
             <li class="skills-list__skill skill">
@@ -76,7 +76,7 @@
                 width="150"
                 height="150"
               />
-              <span class="skill__info">Skill info</span>
+              <span class="skill__info">Discord</span>
               <input class="skill__button" type="submit" name="button_discord" value="SHOW PROJECT">
             </li>
             <li class="skills-list__skill skill">
@@ -87,7 +87,7 @@
                 width="150"
                 height="150"
               />
-              <span class="skill__info">Skill info</span>
+              <span class="skill__info">HTML</span>
               <input class="skill__button" type="submit" name="button_html" value="SHOW PROJECT">
             </li>
             <li class="skills-list__skill skill">
@@ -98,7 +98,7 @@
                 width="150"
                 height="150"
               />
-              <span class="skill__info">Skill info</span>
+              <span class="skill__info">Base de datos</span>
               <input class="skill__button" type="submit" name="button_db" value="SHOW PROJECT">
             </li>
           </ul>
@@ -112,21 +112,21 @@
 
         {% if button_discord%}
           <div class="skills__project project" id="project">
-              <img class="project__img" src="../static/img/discord.png" alt="project" width="500">
+              <img class="project__img" src="../static/img/Captura Discord.png" alt="project" width="500">
               <a class="project__link" href="">Abierto en GitHub</a>
           </div>
         {% endif %}
 
         {% if button_html%}
           <div class="skills__project project" id="project">
-              <img class="project__img" src="../static/img/html.png" alt="project" width="500">
+              <img class="project__img" src="../static/img/Captura meme.png" alt="project" width="500">
               <a class="project__link" href="">Abierto en GitHub</a>
           </div>
         {% endif %}
 
         {% if button_db%}
           <div class="skills__project project" id="project">
-              <img class="project__img" src="../static/img/db.webp" alt="project" width="500">
+              <img class="project__img" src="../static/img/Captura db.png" alt="project" width="500">
               <a class="project__link" href="">Abierto en GitHub</a>
           </div>
         {% endif %}
@@ -135,7 +135,7 @@
       <!-- Formulario de contacto -->
       <section class="main__feedback feedback" id="feedback">
         <h2 class="feedback__title">FEEDBACK</h2>
-        <form action="" method="POST" class="feedback__form form">
+        <form action="/formulario" method="POST" class="feedback__form form">
           <label for="email">
             <input type="email" class="form__input" name="email" id="email" placeholder="Введите E-mail" required>
           </label>
